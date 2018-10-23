@@ -2,7 +2,7 @@ server:
     port: 8000
 spring:
     application:
-        name: eureka-client2
+        name: eureka-client-tester
     cloud: 
         client:
             ipAddress: localhost
