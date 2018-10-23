@@ -1,8 +1,8 @@
 server:
-    port: 8000
+    port: 8001
 spring:
     application:
-        name: eureka-client2
+        name: eureka-client-order
     cloud: 
         client:
             ipAddress: localhost
@@ -15,8 +15,3 @@ eureka:
     client: 
         service-url: 
             default-zone: http://localhost:8761/eureka/
-        #enabled: true
-        #register-with-eureka: true
-        #fetch-registry: true
-        #healthcheck: 
-            #enable: true
