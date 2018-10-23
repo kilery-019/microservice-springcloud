@@ -1,0 +1,22 @@
+server:
+    port: 8000
+spring:
+    application:
+        name: eureka-client2
+    #cloud: 
+        #client:
+            #ipAddress: 169.254.128.56
+eureka: 
+    instance: 
+        #会出现在服务列表的Status里
+        instance-id: ${spring.application.name}:${server.port}
+        prefer-ip-address: false
+        leaseRenewalIntervalInSeconds: 10
+    client: 
+        serviceUrl: 
+            defaultZone: http://localhost:8761/eureka/
+        #enabled: true
+        #register-with-eureka: true
+        #fetch-registry: true
+        #healthcheck: 
+            #enable: true

@@ -1,0 +1,13 @@
+#yml类型的配置文件，冒号+空（白）格构成key和value的分隔符，冒号直接跟字符，看作是value，如defaultZone
+#  ${key.path}可以引用本文件内部定义的任何值，
+server: 
+    port: 8761
+eureka: 
+    instance: 
+        hostname: localhost
+        leaseRenewalIntervalInSeconds: 10
+    client: 
+        registerWithEureka: false
+        fetchRegistry: false
+        serviceUrl: 
+            defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
